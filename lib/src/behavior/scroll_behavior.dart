@@ -33,10 +33,11 @@ class ERScrollBehavior extends ScrollBehavior {
             details.controller!.debugLabel == 'inner') {
           return child;
         }
-        return Scrollbar(
-          controller: details.controller,
-          child: child,
-        );
+        return child;
+      // return Scrollbar(
+      //   controller: details.controller,
+      //   child: child,
+      // );
       case TargetPlatform.android:
       case TargetPlatform.fuchsia:
       case TargetPlatform.iOS:

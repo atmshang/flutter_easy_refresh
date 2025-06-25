@@ -436,6 +436,7 @@ class _EasyRefreshState extends State<EasyRefresh>
       ),
     );
     _physics = _ERScrollPhysics(
+      parent: CustomDirectionScrollPhysics(axis: widget.triggerAxis),
       userOffsetNotifier: _userOffsetNotifier,
       headerNotifier: _headerNotifier,
       footerNotifier: _footerNotifier,
